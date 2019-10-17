@@ -1,0 +1,89 @@
+  h1 {
+      text-align: center;
+  }
+
+  p {
+      text-align: left;
+  }
+
+  .btn-group {
+      padding-top: 15px;
+      margin-left: 15px;
+
+  }
+
+  #goalBox{
+      background-color: lightblue;
+      height: 200px;
+      width: 200px;
+      text-align: center;
+  }
+
+  #play{
+      width:150px;
+  }
+  
+  .btn-success{
+      width: 200px;
+      height: 200px;
+  }
+
+  #winLossBox{
+      background-color: lightsalmon;
+      height: 200px;
+      width: 200px;
+      margin-left: 15x;
+  }
+
+  .losses{
+      margin-top: 50px;
+  }
+
+  .wins{
+      margin-top: 45px;
+  }
+
+  #totalScore{
+      background-color: yellow;
+      height: 30px;
+      width: 300px;
+      margin-top: 15px;
+      text-align: center;
+  }
+
+  #currentScore{
+      background-color: yellow;
+      height: 200px;
+      width: 300px;
+      text-align: center;
+  }
+  
+  #redCrystal{
+        background-image: url(images/gem3.png);
+        background-size: contain;
+        width: 150px;
+        height: 150px;
+  }
+
+  #blueCrystal{
+    background-image: url(images/gem2.png);
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+}
+
+  #greenCrystal{
+        background-image: url(image/gem1.png);
+        background-size: contain;
+        width: 150px;
+        height: 150px;
+  }
+
+  #yellowCrystal{
+      background-image: url(image/gem4.png);
+      background-size: contain;
+      width: 150px;
+      height: 150px;
+  }
+
+  
