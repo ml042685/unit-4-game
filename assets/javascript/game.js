@@ -1,80 +1,79 @@
-var wins = 0
-var losses = 0
-var goalNumber = 0
-var totalScore = 0
-var redCrystal = 0
-var blueCrystal= 0
-var greenCrystal= 0
-var yellowCrystal= 0
+$(document).ready(function() {
+
+    var wins = 0;
+     var losses = 0;
+     var playerScore = 0;
+     var computerScore = Math.ceil((Math.random() * 102) + 19);
+     var green = Math.ceil(Math.random() * 12);
+     var blue = Math.ceil(Math.random() * 12);
+     var red = Math.ceil(Math.random() * 12);
+     var yellow = Math.ceil(Math.random() * 12);
 
 
-var random = randomNumber(19,120)
+ function game(){
+     if (playerScore == computerScore) {
+         wins++;
+         $("#Message").html("You won!");
+         gameReset();
+     } else if (playerScore > computerScore) {
+         losses++;
+         $("#Message").html("You lost!");
+         gameReset();
+     } else {
+         scoreUpdate();
+     }
+ };
 
-var redRandom = randomNumber(1,12)
-var blueRandom = randomNumber(1,12)
-var greenRandom = randomNumber(1,12)
-var yellowRandom = randomNumber(1,12)
 
-  function reset(){
-    redRandom = randomNumber(1,12)
-    blueRandom = randomNumber(1,12)
-    greenRandom = randomNumber(1,12)
-    yellowRandom = randomNumber(1,12)
-    random = randomNumber(19,120)
-    goalNumber=0
-    totalScore: 0;
 
-}
+     $("#total").append(computerScore);
 
-function randomNumber(min,max){
-  return Math.floor(Math.random()*(max-min+1)+min);
-}
+     $("#score").append(playerScore);
 
 
 $(document).ready(function() {
+     $("#green").click(function(){
+         playerScore = playerScore + green;
+         game();
+     })
 
-  $("#play").click(function(){
-    document.getElementById("goalNumber").innerHTML = random;
+     $("#blue").click(function(){
+         playerScore = playerScore + blue;
+         game();
+     })
 
-});
+     $("#red").click(function(){
+         playerScore = playerScore + red;
+         game();
+     })
 
-  $("#redCrystal").click(function(){
-    totalScore += redRandom;
-    document.getElementById("currentScore").innerHTML = totalScore;
+     $("#yellow").click(function(){
+         playerScore = playerScore + yellow;
+         game();
+     });
+ });
 
-});
+ function scoreUpdate() {
+     $("#score").empty();
+     $("#score").append(playerScore);
 
-$("#blueCrystal").click(function(){
-  totalScore += blueRandom;
-  document.getElementById("currentScore").innerHTML = totalScore;
+     $("#Wins").empty();
+     $("#Wins").append(wins);
 
-});
+     $("#Losses").empty();
+     $("#Losses").append(losses);
+ };
 
-$("#yellowCrystal").click(function(){
-  totalScore += purpleRandom;
-  document.getElementById("currentScore").innerHTML = totalScore;
+ function gameReset(){
+     playerScore = 0;
+     computerScore = Math.floor((Math.random() * 102) + 19);
+     $("#total").empty();
+     $("#total").append(computerScore);
+     green = Math.ceil(Math.random() * 12);
+     blue = Math.ceil(Math.random() * 12);
+     red = Math.ceil(Math.random() * 12);
+     yellow = Math.ceil(Math.random() * 12);
+     scoreUpdate();
+ };	
 
-});
-
-$("#greenCrystal").click(function(){
-  totalScore += greenRandom;
-  document.getElementById("currentScore").innerHTML = totalScore;
-
-});
-
-document.onclick = function () {
-
-if (random === totalScore) {
-    wins++;
-    $("#winCount").html(wins);
-    reset();
-
-} if (random > totalScore){
-  losses++;
-  $("#lossCount").html(losses);
-  reset();
-  }
-
-  console.log(losses);
-  };
 });

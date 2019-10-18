@@ -1,89 +1,76 @@
-  h1 {
-      text-align: center;
-  }
-
-  p {
-      text-align: left;
-  }
-
-  .btn-group {
-      padding-top: 15px;
-      margin-left: 15px;
-
-  }
-
-  #goalBox{
-      background-color: lightblue;
-      height: 200px;
-      width: 200px;
-      text-align: center;
-  }
-
-  #play{
-      width:150px;
+*{
+    box-sizing: border-box;
   }
   
-  .btn-success{
-      width: 200px;
-      height: 200px;
+  body{
+    background-color: lightskyblue;
+    line-height: 25px;
+    font-size: 20px;
+    margin: 0 auto;
   }
-
-  #winLossBox{
-      background-color: lightsalmon;
-      height: 200px;
-      width: 200px;
-      margin-left: 15x;
+  
+  .container{
+    width: 100%;
+    max-width: 960px;
+    padding: 0;
+    margin: 0 auto;
   }
-
-  .losses{
-      margin-top: 50px;
+  
+  #titleGame{
+    background: skyblue;
+    font-weight: normal;
+    padding: 20px;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
   }
-
-  .wins{
-      margin-top: 45px;
+  
+  #instructions{
+    background: lightgreen;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: center;
   }
-
+   
+  #counter{
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+  
+  #total{
+    background: lightgray;
+    padding: 59px;
+    text-align: center;
+    margin-right: 10px;
+  }
+  
+  #winloss{
+    background: yellow;
+    padding: 25px;
+  }
+  
+  #crystals{
+    margin-left: 350px;
+  }
+  
+  .click{
+    height: 100px;
+    width: 100px;
+  }
+  
   #totalScore{
-      background-color: yellow;
-      height: 30px;
-      width: 300px;
-      margin-top: 15px;
-      text-align: center;
-  }
-
-  #currentScore{
-      background-color: yellow;
-      height: 200px;
-      width: 300px;
-      text-align: center;
+    font-size: 25px;
+    background: lightpink;
+    padding: 20px;
+    margin-bottom: 10px;
   }
   
-  #redCrystal{
-        background-image: url(images/gem3.png);
-        background-size: contain;
-        width: 150px;
-        height: 150px;
+  #score-update{
+    font-size: 25px;
+    background: salmon;
+    padding: 20px;
+    height: 200px;
+    margin-bottom: 40px;
   }
-
-  #blueCrystal{
-    background-image: url(images/gem2.png);
-    background-size: contain;
-    width: 150px;
-    height: 150px;
-}
-
-  #greenCrystal{
-        background-image: url(image/gem1.png);
-        background-size: contain;
-        width: 150px;
-        height: 150px;
-  }
-
-  #yellowCrystal{
-      background-image: url(image/gem4.png);
-      background-size: contain;
-      width: 150px;
-      height: 150px;
-  }
-
   
