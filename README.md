@@ -76,6 +76,12 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 * Each crystal should have a random hidden value between 1 - 12.
 
+### Technologies
+* HTML5
+* CSS3
+* jQuery
+* Bootstrap
+
 
 ### Click here to play
 https://ml042685.github.io/unit-4-game/
